@@ -1,0 +1,2948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="THE ONLY ONE TOUR COMPANY - Discover Tanzania through safaris, mountains, beaches, culture and unforgettable adventures.">
+
+    <title>THE ONLY ONE TOUR COMPANY | Tanzania</title>
+
+    <style>
+        /* =========================================================
+   GLOBAL
+========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #06100b;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --gold: #f5b942;
+            --green: #0d6b45;
+            --green2: #19a66a;
+            --dark: #06100b;
+            --dark2: #0a1912;
+            --gray: #b9c5bf;
+            --white: #fff;
+        }
+
+        .page {
+            display: none;
+            min-height: 100vh;
+            padding-top: 75px;
+        }
+
+        .page.active {
+            display: block;
+            animation: pageIn .6s ease;
+        }
+
+        @keyframes pageIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================================================
+   HEADER
+========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            z-index: 5000;
+
+            background: rgba(3, 12, 8, .90);
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .navbar {
+            width: min(1250px, 100%);
+            height: 75px;
+            margin: auto;
+
+            padding: 0 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            border: 0;
+            background: none;
+
+            color: white;
+
+            font-size: 18px;
+            font-weight: 900;
+
+            cursor: pointer;
+            letter-spacing: .5px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            list-style: none;
+        }
+
+        .nav-links button {
+            background: none;
+            border: 0;
+
+            color: #fff;
+
+            padding: 11px 12px;
+
+            border-radius: 9px;
+
+            cursor: pointer;
+
+            font-size: 13px;
+
+            transition: .3s;
+        }
+
+        .nav-links button:hover,
+        .nav-links button.active {
+            color: var(--gold);
+            background: rgba(255, 255, 255, .08);
+        }
+
+        .menu-btn {
+            display: none;
+
+            border: 0;
+            background: none;
+
+            color: white;
+
+            font-size: 28px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+   HERO
+========================================================= */
+
+        .home-hero {
+            min-height: calc(100vh - 75px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(rgba(3, 14, 9, .45),
+                    rgba(3, 14, 9, .88)),
+                url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2400&q=95") center/cover;
+        }
+
+        .home-hero::after {
+            content: "";
+
+            position: absolute;
+
+            inset: -20%;
+
+            background:
+                radial-gradient(circle,
+                    rgba(245, 185, 66, .14),
+                    transparent 50%);
+
+            animation: heroMove 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroMove {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.3) rotate(2deg);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            max-width: 950px;
+
+            animation: heroText 1.2s ease;
+        }
+
+        @keyframes heroText {
+            from {
+                opacity: 0;
+                transform: translateY(45px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-tag {
+            display: inline-block;
+
+            padding: 10px 17px;
+
+            border-radius: 50px;
+
+            border: 1px solid rgba(245, 185, 66, .5);
+
+            background: rgba(0, 0, 0, .25);
+
+            color: var(--gold);
+
+            letter-spacing: 3px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(45px, 8vw, 95px);
+
+            line-height: .95;
+
+            margin: 25px 0;
+
+            letter-spacing: -3px;
+
+            text-shadow: 0 20px 60px #000;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold);
+        }
+
+        .hero-content p {
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #e0e8e3;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            border: 0;
+
+            cursor: pointer;
+
+            padding: 15px 25px;
+
+            margin: 5px;
+
+            border-radius: 11px;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            transition: .35s;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #111;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px rgba(245, 185, 66, .25);
+        }
+
+        .btn-secondary {
+            color: #fff;
+
+            background: rgba(255, 255, 255, .1);
+
+            border: 1px solid rgba(255, 255, 255, .25);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #111;
+        }
+
+
+        /* =========================================================
+   GENERAL
+========================================================= */
+
+        section {
+            padding: 95px 20px;
+        }
+
+        .container {
+            width: min(1200px, 100%);
+            margin: auto;
+        }
+
+        .dark {
+            background: #07130d;
+        }
+
+        .green {
+            background: #0a1c14;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            color: var(--gold);
+
+            letter-spacing: 3px;
+
+            font-weight: bold;
+        }
+
+        .section-title h1,
+        .section-title h2 {
+            font-size: clamp(35px, 5vw, 58px);
+
+            margin: 12px 0;
+        }
+
+        .section-title p {
+            color: var(--gray);
+
+            max-width: 720px;
+
+            margin: auto;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+   WELCOME
+========================================================= */
+
+        .welcome {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+        .welcome-image {
+            height: 480px;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+        }
+
+        .welcome-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 1s;
+        }
+
+        .welcome-image:hover img {
+            transform: scale(1.08);
+        }
+
+        .welcome-text h2 {
+            font-size: 45px;
+
+            margin: 15px 0;
+        }
+
+        .welcome-text p {
+            color: var(--gray);
+
+            line-height: 1.8;
+
+            margin-bottom: 18px;
+        }
+
+        .checks {
+            list-style: none;
+
+            margin-top: 20px;
+        }
+
+        .checks li {
+            margin: 12px 0;
+        }
+
+        .checks li::before {
+            content: "✓";
+
+            color: var(--gold);
+
+            margin-right: 10px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+   CARDS
+========================================================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            background:
+                rgba(255, 255, 255, .045);
+
+            border:
+                1px solid rgba(255, 255, 255, .08);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+
+            border-color:
+                rgba(245, 185, 66, .35);
+
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, .35);
+        }
+
+        .card-image {
+            height: 240px;
+
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .7s;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-body h3 {
+            font-size: 23px;
+
+            margin-bottom: 10px;
+        }
+
+        .card-body p {
+            color: var(--gray);
+
+            line-height: 1.65;
+        }
+
+        .card-link {
+            display: inline-block;
+
+            margin-top: 16px;
+
+            color: var(--gold);
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            border: 0;
+
+            background: none;
+        }
+
+
+        /* =========================================================
+   REGIONS
+========================================================= */
+
+        .region-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .region {
+            min-height: 360px;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            background-size: cover;
+
+            background-position: center;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: end;
+
+            padding: 30px;
+
+            transition: .5s;
+        }
+
+        .region:hover {
+            transform: scale(1.02);
+        }
+
+        .region::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(transparent,
+                    rgba(0, 0, 0, .9));
+        }
+
+        .region-content {
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .region-content h3 {
+            font-size: 31px;
+
+            margin-bottom: 8px;
+        }
+
+        .region-content p {
+            color: #ddd;
+        }
+
+
+        /* =========================================================
+   EXPERIENCES
+========================================================= */
+
+        .experience-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .experience {
+            text-align: center;
+
+            padding: 32px 20px;
+
+            background: #0c2117;
+
+            border:
+                1px solid #ffffff0c;
+
+            border-radius: 20px;
+
+            transition: .4s;
+        }
+
+        .experience:hover {
+            transform: translateY(-8px);
+
+            background: #102a1e;
+        }
+
+        .experience-icon {
+            width: 68px;
+            height: 68px;
+
+            border-radius: 50%;
+
+            margin: 0 auto 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background:
+                rgba(245, 185, 66, .12);
+
+            font-size: 30px;
+        }
+
+        .experience h3 {
+            margin-bottom: 9px;
+        }
+
+        .experience p {
+            color: var(--gray);
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+   GALLERY
+========================================================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            grid-auto-rows: 220px;
+
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 17px;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .7s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-label {
+            position: absolute;
+
+            left: 14px;
+
+            bottom: 14px;
+
+            padding: 8px 12px;
+
+            background:
+                rgba(0, 0, 0, .65);
+
+            backdrop-filter: blur(8px);
+
+            border-radius: 7px;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+   PLAN
+========================================================= */
+
+        .plan-box {
+            padding: 80px 30px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(rgba(3, 15, 9, .85),
+                    rgba(3, 15, 9, .92)),
+                url("https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=2200&q=95") center/cover;
+        }
+
+        .plan-box h2 {
+            font-size:
+                clamp(35px, 5vw, 60px);
+        }
+
+        .plan-box p {
+            max-width: 700px;
+
+            margin: 20px auto;
+
+            color: #d2ddd6;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+   CONTACT
+========================================================= */
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                .8fr 1.2fr;
+
+            gap: 30px;
+        }
+
+        .contact-box,
+        .form-box {
+            background: #0c2117;
+
+            border:
+                1px solid #ffffff0c;
+
+            border-radius: 22px;
+
+            padding: 35px;
+        }
+
+        .contact-box h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: var(--gray);
+
+            line-height: 1.7;
+        }
+
+        .contact-item {
+            margin: 23px 0;
+        }
+
+        .contact-item strong {
+            display: block;
+
+            color: var(--gold);
+
+            margin-bottom: 6px;
+        }
+
+        .contact-item span {
+            color: #e1e9e4;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+
+            padding: 16px;
+
+            margin-bottom: 15px;
+
+            background: #06110b;
+
+            color: white;
+
+            border:
+                1px solid #ffffff18;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-family: inherit;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--gold);
+        }
+
+        textarea {
+            min-height: 160px;
+
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+        }
+
+
+        /* =========================================================
+   FOOTER
+========================================================= */
+
+        footer {
+            background: #030906;
+
+            padding:
+                55px 20px 25px;
+        }
+
+        .footer-grid {
+            width: min(1200px, 100%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.4fr 1fr 1fr;
+
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: var(--gray);
+
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 10px 0;
+        }
+
+        .footer-links button {
+            border: 0;
+
+            background: none;
+
+            color: var(--gray);
+
+            cursor: pointer;
+        }
+
+        .footer-links button:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            width: min(1200px, 100%);
+
+            margin: 40px auto 0;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid #ffffff10;
+
+            color: #77847d;
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+   WHATSAPP
+========================================================= */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 22px;
+
+            bottom: 22px;
+
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #25D366;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 28px;
+
+            z-index: 6000;
+
+            box-shadow:
+                0 10px 35px #0008;
+
+            animation:
+                waPulse 2s infinite;
+        }
+
+        @keyframes waPulse {
+
+            0% {
+                box-shadow:
+                    0 0 0 0 rgba(37, 211, 102, .5);
+            }
+
+            70% {
+                box-shadow:
+                    0 0 0 18px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow:
+                    0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+
+        /* =========================================================
+   MOBILE
+========================================================= */
+
+        @media(max-width:950px) {
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+
+                top: 75px;
+
+                left: 0;
+
+                width: 100%;
+
+                padding: 15px;
+
+                background: #06100b;
+
+                flex-direction: column;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links button {
+                width: 100%;
+
+                text-align: left;
+
+                padding: 14px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .cards {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .experience-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .welcome {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+        }
+
+
+        @media(max-width:650px) {
+
+            .hero-content h1 {
+                letter-spacing: -1px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .region-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns:
+                    1fr 1fr;
+
+                grid-auto-rows: 180px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+
+                grid-row: span 1;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .welcome-image {
+                height: 350px;
+            }
+
+            section {
+                padding: 75px 17px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =======================================================
+     HEADER
+======================================================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <button class="logo" onclick="showPage('home')">
+
+                THE ONLY ONE
+                <span>TOUR COMPANY</span>
+
+            </button>
+
+
+            <button class="menu-btn" onclick="toggleMenu()">
+
+                ☰
+
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <button onclick="showPage('home')">
+                        Home
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="showPage('explore')">
+                        Explore
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="showPage('destinations')">
+                        Destinations
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="showPage('regions')">
+                        Regions
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="showPage('experiences')">
+                        Experiences
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="showPage('gallery')">
+                        Gallery
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="showPage('plan')">
+                        Plan Trip
+                    </button>
+                </li>
+
+                <li>
+                    <button onclick="showPage('contact')">
+                        Contact
+                    </button>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =======================================================
+     HOME
+======================================================= -->
+
+    <div class="page active" id="home">
+
+
+        <section class="home-hero">
+
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    THE ONLY ONE TOUR COMPANY
+                </div>
+
+                <h1>
+                    Discover
+                    <span>Tanzania</span>
+                </h1>
+
+                <p>
+                    Experience the wild heart of Africa through unforgettable
+                    safaris, mountains, beaches, culture and incredible landscapes.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="btn btn-primary" onclick="showPage('explore')">
+
+                        Explore Tanzania
+
+                    </button>
+
+                    <button class="btn btn-secondary" onclick="showPage('plan')">
+
+                        Plan Your Journey
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="dark">
+
+            <div class="container">
+
+                <div class="welcome">
+
+
+                    <div class="welcome-image">
+
+                        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=2000&q=95"
+                            alt="Tanzania Safari">
+
+                    </div>
+
+
+                    <div class="welcome-text">
+
+                        <small style="color:#f5b942;letter-spacing:3px">
+
+                            WELCOME TO TANZANIA
+
+                        </small>
+
+                        <h2>
+                            One Country.<br>
+                            Endless Adventures.
+                        </h2>
+
+                        <p>
+                            Discover spectacular wildlife, beautiful mountains,
+                            tropical islands and authentic Tanzanian culture.
+                        </p>
+
+                        <p>
+                            THE ONLY ONE TOUR COMPANY connects travelers
+                            with unforgettable Tanzania experiences.
+                        </p>
+
+
+                        <ul class="checks">
+
+                            <li>Wildlife Safari</li>
+
+                            <li>Mount Kilimanjaro</li>
+
+                            <li>Zanzibar Beach Holidays</li>
+
+                            <li>Culture & History</li>
+
+                            <li>Professional Trip Planning</li>
+
+                        </ul>
+
+
+                        <button class="btn btn-primary" onclick="showPage('destinations')">
+
+                            View Destinations
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="green">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        START YOUR ADVENTURE
+                    </small>
+
+                    <h2>
+                        Experience Tanzania
+                    </h2>
+
+                    <p>
+                        A country filled with wildlife, mountains,
+                        beaches and culture.
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <!-- WILDLIFE -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=95"
+                                alt="Tanzania Safari">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Wildlife Safari
+                            </h3>
+
+                            <p>
+                                Explore Tanzania's famous wildlife destinations.
+                            </p>
+
+                            <button class="card-link" onclick="showPage('experiences')">
+
+                                Discover →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- KILIMANJARO FIXED -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Clouds_Over_Mount_Kilimanjaro_(Unsplash).jpg"
+                                alt="Mount Kilimanjaro Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Mountain Adventure
+                            </h3>
+
+                            <p>
+                                Experience the spectacular Mount Kilimanjaro.
+                            </p>
+
+                            <button class="card-link" onclick="showPage('destinations')">
+
+                                Discover →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ZANZIBAR -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=95"
+                                alt="Zanzibar Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Zanzibar
+                            </h3>
+
+                            <p>
+                                Relax on beautiful tropical beaches
+                                and explore island culture.
+                            </p>
+
+                            <button class="card-link" onclick="showPage('destinations')">
+
+                                Discover →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =======================================================
+     EXPLORE
+======================================================= -->
+
+    <div class="page" id="explore">
+
+        <section class="dark">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        EXPLORE
+                    </small>
+
+                    <h1>
+                        Explore
+                        <span style="color:#f5b942">
+                            Tanzania
+                        </span>
+                    </h1>
+
+                    <p>
+                        Discover iconic destinations across Tanzania.
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <!-- SERENGETI -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=95"
+                                alt="Serengeti Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Serengeti
+                            </h3>
+
+                            <p>
+                                Famous African plains, wildlife and safari adventures.
+                            </p>
+
+                            <button class="card-link" onclick="showPage('destinations')">
+
+                                Explore →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- KILIMANJARO FIXED -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Clouds_Over_Mount_Kilimanjaro_(Unsplash).jpg"
+                                alt="Mount Kilimanjaro Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Kilimanjaro
+                            </h3>
+
+                            <p>
+                                Africa's highest mountain and an unforgettable adventure.
+                            </p>
+
+                            <button class="card-link" onclick="showPage('destinations')">
+
+                                Explore →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ZANZIBAR -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=95"
+                                alt="Zanzibar Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Zanzibar
+                            </h3>
+
+                            <p>
+                                Tropical beaches, Indian Ocean experiences and culture.
+                            </p>
+
+                            <button class="card-link" onclick="showPage('destinations')">
+
+                                Explore →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NGORONGORO -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=1800&q=95"
+                                alt="Ngorongoro Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Ngorongoro
+                            </h3>
+
+                            <p>
+                                Spectacular volcanic landscapes and wildlife.
+                            </p>
+
+                            <button class="card-link" onclick="showPage('destinations')">
+
+                                Explore →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TARANGIRE -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=1800&q=95"
+                                alt="Tarangire Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Tarangire
+                            </h3>
+
+                            <p>
+                                Baobabs, elephants and beautiful landscapes.
+                            </p>
+
+                            <button class="card-link" onclick="showPage('destinations')">
+
+                                Explore →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RUAHA -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?auto=format&fit=crop&w=1800&q=95"
+                                alt="Ruaha Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Ruaha
+                            </h3>
+
+                            <p>
+                                Remote wilderness and wildlife adventures.
+                            </p>
+
+                            <button class="card-link" onclick="showPage('destinations')">
+
+                                Explore →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =======================================================
+     DESTINATIONS
+======================================================= -->
+
+    <div class="page" id="destinations">
+
+        <section class="green">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        DESTINATIONS
+                    </small>
+
+                    <h1>
+                        Our Destinations
+                    </h1>
+
+                    <p>
+                        Choose where you want your Tanzania journey to take you.
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <!-- SERENGETI -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=95"
+                                alt="Serengeti Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Serengeti
+                            </h3>
+
+                            <p>
+                                Wildlife safari and spectacular African landscapes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- KILIMANJARO FIXED -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Clouds_Over_Mount_Kilimanjaro_(Unsplash).jpg"
+                                alt="Mount Kilimanjaro Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Mount Kilimanjaro
+                            </h3>
+
+                            <p>
+                                Mountain trekking and spectacular views.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ZANZIBAR -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=95"
+                                alt="Zanzibar Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Zanzibar
+                            </h3>
+
+                            <p>
+                                Beaches, marine experiences and island culture.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NGORONGORO -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=1800&q=95"
+                                alt="Ngorongoro Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Ngorongoro
+                            </h3>
+
+                            <p>
+                                Explore one of Tanzania's remarkable volcanic landscapes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TARANGIRE -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=1800&q=95"
+                                alt="Tarangire Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Tarangire
+                            </h3>
+
+                            <p>
+                                Elephants, baobabs and wilderness.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RUAHA -->
+
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <img src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?auto=format&fit=crop&w=1800&q=95"
+                                alt="Ruaha Tanzania">
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h3>
+                                Ruaha
+                            </h3>
+
+                            <p>
+                                Remote wilderness and wildlife.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =======================================================
+     REGIONS
+======================================================= -->
+
+    <div class="page" id="regions">
+
+        <section class="dark">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        REGIONS
+                    </small>
+
+                    <h1>
+                        Tanzania Regions
+                    </h1>
+
+                    <p>
+                        Discover different sides of Tanzania.
+                    </p>
+
+                </div>
+
+
+                <div class="region-grid">
+
+
+                    <!-- NORTHERN -->
+
+                    <div class="region" style="
+background-image:url(
+'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2000&q=95'
+);
+">
+
+                        <div class="region-content">
+
+                            <h3>
+                                Northern Tanzania
+                            </h3>
+
+                            <p>
+                                Serengeti · Kilimanjaro · Ngorongoro · Tarangire
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SOUTHERN -->
+
+                    <div class="region" style="
+background-image:url(
+'https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=2000&q=95'
+);
+">
+
+                        <div class="region-content">
+
+                            <h3>
+                                Southern Tanzania
+                            </h3>
+
+                            <p>
+                                Ruaha · Nyerere · Remote Wilderness
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EASTERN -->
+
+                    <div class="region" style="
+background-image:url(
+'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=95'
+);
+">
+
+                        <div class="region-content">
+
+                            <h3>
+                                Eastern Coast
+                            </h3>
+
+                            <p>
+                                Indian Ocean · Beaches · Coastal Culture
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ZANZIBAR -->
+
+                    <div class="region" style="
+background-image:url(
+'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=95'
+);
+">
+
+                        <div class="region-content">
+
+                            <h3>
+                                Zanzibar
+                            </h3>
+
+                            <p>
+                                Beaches · Stone Town · Marine Adventures
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =======================================================
+     EXPERIENCES
+======================================================= -->
+
+    <div class="page" id="experiences">
+
+        <section class="green">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        EXPERIENCES
+                    </small>
+
+                    <h1>
+                        Travel Your Way
+                    </h1>
+
+                    <p>
+                        Choose the experience you want to have in Tanzania.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-grid">
+
+
+                    <div class="experience">
+
+                        <div class="experience-icon">
+                            🦁
+                        </div>
+
+                        <h3>
+                            Wildlife Safari
+                        </h3>
+
+                        <p>
+                            Discover Tanzania's wildlife.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="experience">
+
+                        <div class="experience-icon">
+                            🏔️
+                        </div>
+
+                        <h3>
+                            Mountain Trekking
+                        </h3>
+
+                        <p>
+                            Explore spectacular mountains.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="experience">
+
+                        <div class="experience-icon">
+                            🏝️
+                        </div>
+
+                        <h3>
+                            Beach Holiday
+                        </h3>
+
+                        <p>
+                            Relax beside the Indian Ocean.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="experience">
+
+                        <div class="experience-icon">
+                            🌍
+                        </div>
+
+                        <h3>
+                            Culture
+                        </h3>
+
+                        <p>
+                            Discover Tanzanian traditions.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="experience">
+
+                        <div class="experience-icon">
+                            📷
+                        </div>
+
+                        <h3>
+                            Photography
+                        </h3>
+
+                        <p>
+                            Capture unforgettable moments.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="experience">
+
+                        <div class="experience-icon">
+                            🐠
+                        </div>
+
+                        <h3>
+                            Marine Adventure
+                        </h3>
+
+                        <p>
+                            Explore the ocean.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="experience">
+
+                        <div class="experience-icon">
+                            🏛️
+                        </div>
+
+                        <h3>
+                            History
+                        </h3>
+
+                        <p>
+                            Discover Tanzania's heritage.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="experience">
+
+                        <div class="experience-icon">
+                            🍽️
+                        </div>
+
+                        <h3>
+                            Food
+                        </h3>
+
+                        <p>
+                            Taste authentic local flavours.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =======================================================
+     GALLERY
+======================================================= -->
+
+    <div class="page" id="gallery">
+
+        <section class="dark">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        GALLERY
+                    </small>
+
+                    <h1>
+                        Tanzania Through Our Lens
+                    </h1>
+
+                    <p>
+                        Explore the beauty of Tanzania.
+                    </p>
+
+                </div>
+
+
+                <div class="gallery">
+
+
+                    <!-- SAFARI -->
+
+                    <div class="gallery-item large">
+
+                        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2200&q=95"
+                            alt="Tanzania Safari">
+
+                        <div class="gallery-label">
+                            Safari
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WILDLIFE -->
+
+                    <div class="gallery-item">
+
+                        <img src="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?auto=format&fit=crop&w=1800&q=95"
+                            alt="Tanzania Wildlife">
+
+                        <div class="gallery-label">
+                            Wildlife
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- KILIMANJARO FIXED -->
+
+                    <div class="gallery-item">
+
+                        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Clouds_Over_Mount_Kilimanjaro_(Unsplash).jpg"
+                            alt="Mount Kilimanjaro Tanzania">
+
+                        <div class="gallery-label">
+                            Kilimanjaro
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ADVENTURE -->
+
+                    <div class="gallery-item">
+
+                        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1800&q=95"
+                            alt="Tanzania Adventure">
+
+                        <div class="gallery-label">
+                            Adventure
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NATURE -->
+
+                    <div class="gallery-item">
+
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=95"
+                            alt="Tanzania Nature">
+
+                        <div class="gallery-label">
+                            Nature
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ZANZIBAR -->
+
+                    <div class="gallery-item">
+
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=95"
+                            alt="Zanzibar Tanzania">
+
+                        <div class="gallery-label">
+                            Zanzibar
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LANDSCAPE -->
+
+                    <div class="gallery-item">
+
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=95"
+                            alt="Tanzania Landscape">
+
+                        <div class="gallery-label">
+                            Landscape
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TANZANIA -->
+
+                    <div class="gallery-item">
+
+                        <img src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?auto=format&fit=crop&w=1800&q=95"
+                            alt="Tanzania">
+
+                        <div class="gallery-label">
+                            Tanzania
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =======================================================
+     PLAN TRIP
+======================================================= -->
+
+    <div class="page" id="plan">
+
+        <section class="dark">
+
+            <div class="container">
+
+                <div class="plan-box">
+
+                    <h2>
+                        Plan Your Tanzania Adventure
+                    </h2>
+
+                    <p>
+                        Tell us what you want to experience in Tanzania.
+                        Your request will be sent directly to
+                        THE ONLY ONE TOUR COMPANY through WhatsApp.
+                    </p>
+
+                    <button class="btn btn-primary" onclick="showPage('contact')">
+
+                        Start Planning
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =======================================================
+     CONTACT
+======================================================= -->
+
+    <div class="page" id="contact">
+
+        <section class="green">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <small>
+                        CONTACT
+                    </small>
+
+                    <h1>
+                        Plan Your Adventure
+                    </h1>
+
+                    <p>
+                        Send your travel request directly to
+                        THE ONLY ONE TOUR COMPANY.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <!-- CONTACT INFO -->
+
+                    <div class="contact-box">
+
+                        <h2>
+                            THE ONLY ONE TOUR COMPANY
+                        </h2>
+
+                        <p>
+                            Ready to discover Tanzania?
+                            Tell us about your dream trip and we will
+                            receive your request directly on WhatsApp.
+                        </p>
+
+
+                        <div class="contact-item">
+
+                            <strong>
+                                WhatsApp
+                            </strong>
+
+                            <span>
+                                0686960040
+                            </span>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <strong>
+                                Destination
+                            </strong>
+
+                            <span>
+                                Tanzania 🇹🇿
+                            </span>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <strong>
+                                Services
+                            </strong>
+
+                            <span>
+                                Safari · Zanzibar · Kilimanjaro · Tours · Travel Planning
+                            </span>
+
+                        </div>
+
+
+                        <a class="btn btn-primary" href="https://wa.me/255686960040" target="_blank">
+
+                            Chat on WhatsApp
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- FORM -->
+
+                    <div class="form-box">
+
+
+                        <div class="form-row">
+
+                            <input type="text" id="name" placeholder="Your Name" required>
+
+                            <input type="tel" id="phone" placeholder="Your Phone" required>
+
+                        </div>
+
+
+                        <input type="email" id="email" placeholder="Your Email">
+
+
+                        <select id="destination">
+
+                            <option value="">
+                                Choose Destination
+                            </option>
+
+                            <option>
+                                Serengeti
+                            </option>
+
+                            <option>
+                                Mount Kilimanjaro
+                            </option>
+
+                            <option>
+                                Zanzibar
+                            </option>
+
+                            <option>
+                                Ngorongoro
+                            </option>
+
+                            <option>
+                                Tarangire
+                            </option>
+
+                            <option>
+                                Ruaha
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+
+                        <textarea id="message" placeholder="Tell us about your trip..." required>
+</textarea>
+
+
+                        <button class="btn btn-primary" style="width:100%" onclick="sendWhatsApp()">
+
+                            Send Message on WhatsApp
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =======================================================
+     FOOTER
+======================================================= -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h3>
+                    THE ONLY ONE TOUR COMPANY
+                </h3>
+
+                <p>
+                    Discover Tanzania through wildlife,
+                    mountains, beaches, culture and
+                    unforgettable adventures.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <button onclick="showPage('home')">
+                            Home
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="showPage('explore')">
+                            Explore
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="showPage('destinations')">
+                            Destinations
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="showPage('gallery')">
+                            Gallery
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    Travel
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <button onclick="showPage('regions')">
+                            Regions
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="showPage('experiences')">
+                            Experiences
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="showPage('plan')">
+                            Plan Trip
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="showPage('contact')">
+                            Contact
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 THE ONLY ONE TOUR COMPANY.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =======================================================
+     FLOATING WHATSAPP
+======================================================= -->
+
+    <a class="whatsapp"
+        href="https://wa.me/255686960040?text=Hello%20THE%20ONLY%20ONE%20TOUR%20COMPANY%2C%20I%20would%20like%20to%20plan%20a%20Tanzania%20trip."
+        target="_blank" title="Chat with us on WhatsApp">
+
+        ☘
+
+    </a>
+
+
+
+    <!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
+    <script>
+
+
+        /* =========================================================
+           PAGE NAVIGATION
+        ========================================================= */
+
+        function showPage(pageName) {
+
+            document
+                .querySelectorAll(".page")
+                .forEach(function (page) {
+
+                    page.classList.remove("active");
+
+                });
+
+
+            const selectedPage =
+                document.getElementById(pageName);
+
+
+            if (selectedPage) {
+
+                selectedPage.classList.add("active");
+
+            }
+
+
+            history.replaceState(
+                null,
+                "",
+                "#" + pageName
+            );
+
+
+            document
+                .querySelectorAll(".nav-links button")
+                .forEach(function (button) {
+
+                    button.classList.remove("active");
+
+                });
+
+
+            const navButton =
+                document.querySelector(
+                    '.nav-links button[onclick="showPage(\'' +
+                    pageName +
+                    '\')"]'
+                );
+
+
+            if (navButton) {
+
+                navButton.classList.add("active");
+
+            }
+
+
+            document
+                .getElementById("navLinks")
+                .classList.remove("show");
+
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================= */
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navLinks")
+                .classList.toggle("show");
+
+        }
+
+
+        /* =========================================================
+           WHATSAPP FORM
+        ========================================================= */
+
+        function sendWhatsApp() {
+
+            const name =
+                document
+                    .getElementById("name")
+                    .value
+                    .trim();
+
+
+            const phone =
+                document
+                    .getElementById("phone")
+                    .value
+                    .trim();
+
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
+
+
+            const destination =
+                document
+                    .getElementById("destination")
+                    .value;
+
+
+            const message =
+                document
+                    .getElementById("message")
+                    .value
+                    .trim();
+
+
+            if (
+                !name ||
+                !phone ||
+                !message
+            ) {
+
+                alert(
+                    "Please enter your name, phone number and message."
+                );
+
+                return;
+
+            }
+
+
+            const text =
+                `Hello THE ONLY ONE TOUR COMPANY,
+
+I would like to plan a Tanzania trip.
+
+Name: ${name}
+
+Phone: ${phone}
+
+Email: ${email || "Not provided"}
+
+Destination: ${destination || "Not selected"}
+
+Message:
+${message}`;
+
+
+            const whatsappURL =
+                "https://wa.me/255686960040?text=" +
+                encodeURIComponent(text);
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        }
+
+
+        /* =========================================================
+           LOAD PAGE FROM URL HASH
+        ========================================================= */
+
+        function loadPageFromHash() {
+
+            let page =
+                window.location.hash
+                    .replace("#", "");
+
+
+            const validPages = [
+
+                "home",
+
+                "explore",
+
+                "destinations",
+
+                "regions",
+
+                "experiences",
+
+                "gallery",
+
+                "plan",
+
+                "contact"
+
+            ];
+
+
+            if (
+                !validPages.includes(page)
+            ) {
+
+                page = "home";
+
+            }
+
+
+            showPage(page);
+
+        }
+
+
+        /* =========================================================
+           START WEBSITE
+        ========================================================= */
+
+        window.addEventListener(
+            "load",
+            loadPageFromHash
+        );
+
+
+        window.addEventListener(
+            "hashchange",
+            loadPageFromHash
+        );
+
+
+    </script>
+
+</body>
+
+</html>
